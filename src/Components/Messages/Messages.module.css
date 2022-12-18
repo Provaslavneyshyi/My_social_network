@@ -1,0 +1,78 @@
+
+
+.messagesBlock{
+    display: grid;
+    background: cornsilk;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    font-size: 20px;
+    grid-template-areas: 'u  d' 'u  m' 'u  m';
+    grid-template-columns: 300px 600px ;
+    grid-template-rows: 1fr;
+
+}
+
+.users{
+    padding: 15px;
+    text-align: center;
+    grid-area: u;
+}
+
+.dialogs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px;
+    text-align: start;
+    grid-area: d;
+    margin: 20px;
+    border-left: 1px solid #333333;
+    justify-content: space-evenly;
+}
+
+.sendMessage{
+    grid-area: m;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sendMessage input{
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+
+}
+
+.user__name{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 1px;
+    border-bottom: 1px solid #333333;
+}
+
+.user__avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.dialog{
+    background-color: antiquewhite;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.dialog__item{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+
+}
+

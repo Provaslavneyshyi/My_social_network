@@ -1,0 +1,35 @@
+/*Header*/
+
+.header{
+    grid-area: header;
+    background: cornsilk;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    display: grid;
+}
+
+.header__logo{
+    padding-left: 50px;
+}
+
+.header__logo img{
+    width: 50px;
+    height: 60px;
+}
+
+.header__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__login{
+    padding-right: 25px;
+    font-size: 20px;
+}
+
+.header__cite_name{
+    font-size: 35px;
+    font-weight: 600;
+}

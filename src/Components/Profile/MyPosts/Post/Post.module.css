@@ -1,0 +1,56 @@
+.post{
+    display: flex;
+    margin: 25px 0 25px 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.userAvatar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.userAvatar img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px;
+}
+
+.postList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: start;
+}
+
+.userName a{
+    font-size: 20px;
+    padding:  0 20px;
+}
+
+
+.postTime{
+    font-size: 20px;
+    padding: 15px;
+    right: 0;
+}
+
+
+.post__massage{
+    display: flex;
+    margin: 15px 0 15px 115px;
+    font-size: 16px;
+    font-family: sans-serif;
+    word-break: keep-all;
+}
+
+.likesCount{
+    margin: 15px 0 15px 115px;
+}

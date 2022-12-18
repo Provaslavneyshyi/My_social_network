@@ -1,0 +1,44 @@
+.content__logo{
+    font-size: 100px;
+    text-align: center;
+    border: 1px solid #333333;
+    margin: 15px;
+    padding: 15px
+}
+
+.content__discription{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px
+}
+
+.content__user_avatar{
+    display: inline;
+    padding: 0 15px 15px 15px;
+    height: auto;
+}
+
+.content__user_avatar img{
+    display: inline;
+    width: 250px;
+    height: 300px;
+}
+
+.content__user_discription ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.discription__item{
+    display: inline;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.discription__item:first-child{
+    font-size: 30px;
+    font-weight: 500;
+}
