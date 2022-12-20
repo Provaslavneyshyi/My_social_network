@@ -16,8 +16,8 @@ const App = (props) => {
         <>
             <Routes>
                 <Route path='/' element={<Layout/>}>
-                    <Route index element={<Profile PostDataElements={props.PostDataElements}/>}/>
-                    <Route path='Messages/*' element={<Messages UsersDataElements={props.UsersDataElements} UserMessageElements={props.UserMessageElements} />}/>
+                    <Route index element={<Profile Posts={props.Posts}/>}/>
+                    <Route path='Messages/*' element={<Messages UserData={props.UsersData} Messages={props.Messages} Second={props.Second}/>}/>
                     <Route path='Friends' element={<Friends/>}/>
                     <Route path='News' element={<News/>}/>
                     <Route path='Music' element={<Music/>}/>

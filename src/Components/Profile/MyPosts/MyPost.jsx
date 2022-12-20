@@ -1,7 +1,13 @@
 import React from "react";
 import P from './MyPost.module.css';
+import Post from "./Post/Post";
+
+
 
 const MyPost = (props) => {
+
+    let PostDataElements = props.Posts.map(p => <Post message={p.message} likesCount={'Like: ' + p.likesCount}/>)
+
     return (
         <div className={P.PostBlock}>
             <div className={P.PostContainer}>
@@ -11,7 +17,7 @@ const MyPost = (props) => {
                 <button className={P.PostSend}>Send</button>
 
                 <div className={P.post__item}>
-                    {props.PostDataElements}
+                    {PostDataElements}
                     <div className={P.voider}></div>
                 </div>
             </div>

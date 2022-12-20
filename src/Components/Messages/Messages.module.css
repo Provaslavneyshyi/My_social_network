@@ -6,8 +6,9 @@
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
     font-size: 20px;
     grid-template-areas: 'u  d' 'u  m' 'u  m';
-    grid-template-columns: 300px 600px ;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr;
+    justify-content: space-between;
 
 }
 
@@ -15,9 +16,12 @@
     padding: 15px;
     text-align: center;
     grid-area: u;
+    border-right: 1px solid #333333;
 }
 
 .dialogs{
+    height: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -25,8 +29,8 @@
     text-align: start;
     grid-area: d;
     margin: 20px;
-    border-left: 1px solid #333333;
     justify-content: space-evenly;
+
 }
 
 .sendMessage{
@@ -48,7 +52,6 @@
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
     padding: 20px;
     margin: 1px;
     border-bottom: 1px solid #333333;
@@ -58,6 +61,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-right: 15px;
 }
 
 .dialog{
@@ -65,7 +69,7 @@
     padding: 15px;
     border: 1px solid #333333;
     border-radius: 5px;
-    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .dialog__item{
@@ -73,6 +77,25 @@
     flex-direction: row;
     text-align: center;
     align-items: center;
-
+    margin: 10px;
 }
 
+.dialogs2{
+    display: flex;
+    align-items: flex-end;
+}
+
+.dialogs2 .dialog__item{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dialog2 .user__avatar{
+    padding-left: 15px;
+}
+
+.dialog__block{
+    max-height: 770px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
