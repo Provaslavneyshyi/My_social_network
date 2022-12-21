@@ -10,6 +10,12 @@ const Messages = (props) => {
     let UserMessageElements = props.Messages.map(m => <Dialog message={m.message}/>)
     let UserSecondMessageElements = props.Second.map(m => <Dialog message={m.message}/>)
 
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
 
     return (<div className={P.messagesBlock}>
         <div className={P.users}>
@@ -24,8 +30,8 @@ const Messages = (props) => {
             </div>
         </div>
         <div className={P.sendMessage}>
-            <input type="text" placeholder={'Send message'}/>
-            <button>Send</button>
+            <textarea ref={newPostElement} type="text" placeholder={'Send message'}/>
+            <button on onClick={addPost}>Send</button>
         </div>
     </div>);
 }

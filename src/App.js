@@ -16,7 +16,7 @@ const App = (props) => {
         <>
             <Routes>
                 <Route path='/' element={<Layout/>}>
-                    <Route index element={<Profile Posts={props.Posts}/>}/>
+                    <Route index element={<Profile Posts={props.Posts} AddPost={props.AddPost}/>}/>
                     <Route path='Messages/*' element={<Messages UserData={props.UsersData} Messages={props.Messages} Second={props.Second}/>}/>
                     <Route path='Friends' element={<Friends/>}/>
                     <Route path='News' element={<News/>}/>

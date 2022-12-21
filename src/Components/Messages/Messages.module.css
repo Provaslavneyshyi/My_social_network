@@ -40,12 +40,12 @@
     align-items: center;
 }
 
-.sendMessage input{
-    padding: 15px;
+.sendMessage textarea{
+    padding: 10px;
     width: 100%;
     max-width: 500px;
     border-radius: 5px;
-
+    resize: none;
 }
 
 .user__name{

@@ -1,9 +1,11 @@
+import {rerenderEntireTree} from "../render";
+
 let State = {
     profilePage:{
         PostData: [
-            {likesCount: 5, message: 'Hello World!'},
-            {likesCount: 8, message: 'Programming it\'s all world'},
-            {likesCount: 1, message: 'World! World! World!'}
+            {id: 1, likesCount: 5, message: 'Hello World!'},
+            {id: 2, likesCount: 8, message: 'Programming it\'s all world'},
+            {id: 3, likesCount: 1, message: 'World! World! World!'}
         ]
     },
     MessagesPage:{
@@ -29,8 +31,12 @@ let State = {
             {message: 'We are make a message too!!!'}
         ]
     }
-
-
-
 }
+
+export let AddPost = (newPostMessage) =>{
+    let newPost = { id: 4, message: newPostMessage, likesCount: 0 }
+    State.profilePage.PostData.push(newPost)
+    rerenderEntireTree(State);
+}
+
 export default State;
