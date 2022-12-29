@@ -5,8 +5,10 @@ let State = {
         PostData: [
             {id: 1, likesCount: 5, message: 'Hello World!'},
             {id: 2, likesCount: 8, message: 'Programming it\'s all world'},
+            {id: 2, likesCount: 8, message: 'Programming it\'s all world'},
             {id: 3, likesCount: 1, message: 'World! World! World!'}
-        ]
+        ],
+        newPostText: ''
     },
     MessagesPage:{
         UsersData: [
@@ -30,13 +32,27 @@ let State = {
             {message: 'Yes, it\'s will be fine '},
             {message: 'We are make a message too!!!'}
         ]
+    },
+    FriendPage:{
+        FriendsList: [
+            {name: 'Sergey', family_name: 'Tytunin', id: 1},
+            {name: 'Vasena', family_name: 'Nyashka', id: 2},
+            {name: 'Juzo', family_name: 'Humster', id: 3},
+            {name: 'Fat', family_name: 'Sam', id: 4}
+        ]
     }
 }
 
-export let AddPost = (newPostMessage) =>{
-    let newPost = { id: 4, message: newPostMessage, likesCount: 0 }
+export let AddPost = () =>{
+    let newPost = { id: 4, message: State.profilePage.newPostText, likesCount: 0 }
     State.profilePage.PostData.push(newPost)
     rerenderEntireTree(State);
 }
+
+export let updateNewPostText = (newText) => {
+    State.profilePage.newPostText = newText;
+    rerenderEntireTree(State);
+}
+
 
 export default State;

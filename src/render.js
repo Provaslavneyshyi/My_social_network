@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
-import {AddPost} from "./Redux/State";
+import {AddPost, updateNewPostText} from "./Redux/State";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,7 +18,11 @@ export let rerenderEntireTree = (State) =>{
                     Messages={State.MessagesPage.UserMessage}
                     Second={State.MessagesPage.SecondUserMessage}
                     Posts={State.profilePage.PostData}
-                    AddPost={AddPost}/>
+                    postText={State.profilePage.newPostText}
+                    friendData={State.FriendPage.FriendsList}
+                    updateNewPostText={updateNewPostText}
+                    AddPost={AddPost}
+                    />
 
             </BrowserRouter>
         </React.StrictMode>

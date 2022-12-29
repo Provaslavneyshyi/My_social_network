@@ -1,0 +1,28 @@
+.friends{
+    display: flex;
+    height: 800px;
+}
+
+.friends__list{
+    display: flex;
+    width: 60%;
+    background: burlywood;
+    border-radius: 30px;
+    margin-left: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: cornsilk;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.other__friends{
+    display: flex;
+    width: 40%;
+    background: burlywood;
+    border-radius: 30px;
+    margin-left: 15px;
+    height: 50%;
+    background: cornsilk;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+

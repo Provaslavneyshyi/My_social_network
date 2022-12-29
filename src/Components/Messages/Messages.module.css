@@ -13,7 +13,7 @@
 }
 
 .users{
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     grid-area: u;
     border-right: 1px solid #333333;
@@ -52,9 +52,25 @@
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    margin: 1px;
-    border-bottom: 1px solid #333333;
+    padding: 15px;
+    margin: 10px 5px;
+    background: cornsilk;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    border-radius: 20px;
+    transition: .3s;
+
+}
+
+.user__name:hover{
+    transform: scale(0.9);
+}
+
+.user__name a{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user__name img{
+
 }
 
 .user__avatar{

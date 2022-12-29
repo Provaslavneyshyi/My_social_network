@@ -3,7 +3,8 @@
     margin: 25px 0 25px 0;
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: burlywood;
+    background-color: cornsilk;
+    box-shadow: 0px 3px 8px 0px rgba(34, 60, 80, 0.2);
     padding: 15px;
     border-radius: 15px;
 }
