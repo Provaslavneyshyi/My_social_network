@@ -12,10 +12,12 @@ const Messages = (props) => {
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
+    let addPost = (props) => {
         let text = newPostElement.current.value;
         alert(text);
     }
+
+
 
     return (<div className={P.messagesBlock}>
         <div className={P.users}>
@@ -31,7 +33,7 @@ const Messages = (props) => {
         </div>
         <div className={P.sendMessage}>
             <textarea ref={newPostElement} type="text" placeholder={'Send message'}/>
-            <button on onClick={addPost}>Send</button>
+            <button type='button' on onClick={addPost}>Send</button>
         </div>
     </div>);
 }

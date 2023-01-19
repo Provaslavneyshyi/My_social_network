@@ -1,3 +1,6 @@
+
+
+
 .friends{
     display: flex;
     height: 800px;
@@ -13,16 +16,72 @@
     flex-wrap: nowrap;
     background: cornsilk;
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.friends__list span{
+    width: auto;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px;
+
+}
+
+.friends__list::-webkit-scrollbar{
+    width: 0;
 }
 
 .other__friends{
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     width: 40%;
     background: burlywood;
     border-radius: 30px;
     margin-left: 15px;
-    height: 50%;
+    height: 52%;
     background: cornsilk;
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    justify-content: space-between;
 }
 
+.other__friends span{
+    width: auto;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.other__friends button{
+    height: 40px;
+    margin: 25px;
+    border-radius: 20px;
+    background: cornsilk;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.other__friends_mb img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.other__friends_mb{
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.other__friends_mb span{
+    font-size: 20px;
+    text-align: center;
+}

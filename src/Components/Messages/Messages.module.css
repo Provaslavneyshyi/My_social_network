@@ -1,4 +1,6 @@
-
+*{
+    scroll-behavior: unset;
+}
 
 .messagesBlock{
     display: grid;
@@ -9,7 +11,7 @@
     grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr;
     justify-content: space-between;
-
+    overflow-y: hidden;
 }
 
 .users{
@@ -20,15 +22,13 @@
 }
 
 .dialogs{
-    height: 500px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 15px;
     text-align: start;
     grid-area: d;
-    margin: 20px;
     justify-content: space-evenly;
 
 }
@@ -38,14 +38,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: #333333 solid 1px;
+    padding: 15px 0 15px;
 }
 
 .sendMessage textarea{
     padding: 10px;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 5px;
+    width: 500px;
+    border-radius: 25px;
     resize: none;
+}
+
+.sendMessage button{
+    width: 100px;
+    height: 55px;
+    border-radius: 25px;
+    margin-left: 5px;
 }
 
 .user__name{
@@ -111,7 +119,12 @@
 }
 
 .dialog__block{
-    max-height: 770px;
+    max-height: 750px;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding: 0 15px;
+}
+
+.dialog__block::-webkit-scrollbar {
+    width: 0;
 }

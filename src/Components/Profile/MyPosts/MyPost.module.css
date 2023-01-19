@@ -21,7 +21,7 @@ textarea.PostInput{
     height: 50px;
     resize: none;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px 20px;
     font-size: 18px;
 }

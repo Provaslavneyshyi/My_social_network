@@ -24,7 +24,7 @@ const MyPost = (props) => {
                 <div className={P.MyPost__name}>MY POST</div>
                 <textarea onChange={onChangePost} ref={newPostElement} name="PostInput" id="" cols="30" rows="10" className={P.PostInput}
                           placeholder='New Post' value={ props.postText}/>
-                <button onClick={addPost} className={P.PostSend}>Send</button>
+                <button key={"buttonPost"} onClick={addPost} className={P.PostSend}>Send</button>
                 <div className={P.post__item}>
                     {PostDataElements}
                     <div className={P.voider}></div>
