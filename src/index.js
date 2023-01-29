@@ -9,8 +9,6 @@ import Store from "./Redux/State";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-debugger;
-
 let rerenderEntireTree = () =>{
     root.render(
         <React.StrictMode>
@@ -18,14 +16,14 @@ let rerenderEntireTree = () =>{
                 <App
                     UsersData={Store.getStatee().MessagesPage.UsersData}
                     Messages={Store.getStatee().MessagesPage.UserMessage}
+                    messagesText={Store.getStatee().MessagesPage.newMessagesText}
                     Second={Store.getStatee().MessagesPage.SecondUserMessage}
                     Posts={Store.getStatee().profilePage.PostData}
                     postText={Store.getStatee().profilePage.newPostText}
                     friendData={Store.getStatee().FriendPage.FriendsList}
-                    updateNewPostText={Store.updateNewPostText.bind(Store)}
-                    AddPost={Store.AddPost.bind(Store)}
-                />
+                    dispatch={Store.dispatch.bind(Store)}
 
+                />
             </BrowserRouter>
         </React.StrictMode>
     );
